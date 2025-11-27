@@ -27,8 +27,4 @@ Easily insert emoticons into your notes using a **Command Palette**, **Hotkeys**
    - `manifest.json`
 4. Reload Obsidian and enable the plugin from **Settings → Community Plugins**
 
----
 
-I can also rewrite it in an **even snappier, marketing-style version** that makes it super appealing for first-time users.
-
-Do you want me to do that?
