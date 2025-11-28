@@ -142,7 +142,9 @@ class EmoticonPickerModal extends Modal {
       buttons = Array.from(grid.querySelectorAll('.emoticon-picker__item'));
       // Ensure focusIndex is valid
       if (this.focusIndex >= buttons.length) this.focusIndex = 0;
-      if (buttons.length > 0 && this.focusIndex >= 0) { buttons[this.focusIndex].focus(); }
+      const ae = document.activeElement;
+      const isSearchFocused = ae === input || (ae && ae.classList && ae.classList.contains('emoticon-picker__search'));
+      if (buttons.length > 0 && this.focusIndex >= 0 && !isSearchFocused) { buttons[this.focusIndex].focus(); }
       
       // Determine which emoticons should be wide based on character length
       requestAnimationFrame(() => {
@@ -166,6 +168,7 @@ class EmoticonPickerModal extends Modal {
       render();
     };
     render();
+    input.focus();
 
     const computeRows = () => {
       const btns = Array.from(grid.querySelectorAll('.emoticon-picker__item'));

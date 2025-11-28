@@ -1,7 +1,7 @@
 {
   "id": "emoticon-picker",
   "name": "Emoticon Picker",
-  "description": "A plugin that allows you to pick emoticons from a list and insert them into your notes.",
+  "description": "Allows you to pick emoticons from a list and insert them into your notes.",
   "version": "0.2.0",
   "minAppVersion": "0.15.0",
   "author": "Kazi Aidah Haque",
