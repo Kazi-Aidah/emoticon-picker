@@ -2,7 +2,7 @@
   "id": "emoticon-picker",
   "name": "Emoticon Picker",
   "description": "Allows you to pick emoticons from a list and insert them into your notes.",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "minAppVersion": "0.15.0",
   "author": "Kazi Aidah Haque",
   "authorUrl": "https://github.com/Kazi-Aidah",
