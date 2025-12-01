@@ -18,8 +18,6 @@ class EmoticonPickerModal extends Modal {
     header.addClass('emoticon-picker__header');
 
     const title = header.createEl('h2', { text: 'Emoticon Picker' });
-    title.style.marginTop = '-10px';
-    title.style.marginBottom = '20px';
     title.addClass('emoticon-picker__title');
 
     const input = header.createEl('input', { type: 'text', placeholder: 'Search emoticons or tags' });
@@ -369,6 +367,7 @@ module.exports = class EmoticonPickerPlugin extends Plugin {
     await this.loadSettings();
     await this.loadDataset();
     this.addRibbonIcon('smile', 'Emoticon Picker', () => this.openPicker());
+    // No default hotkey to avoid conflicts with user settings and other plugins
     this.addCommand({ id: 'open-emoticon-picker', name: 'Open Emoticon Picker', callback: () => this.openPicker() });
     this.addSettingTab(new EmoticonPickerSettingTab(this.app, this));
   }
