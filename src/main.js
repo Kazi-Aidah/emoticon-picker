@@ -1,4 +1,4 @@
-const { Plugin, Modal, MarkdownView, Setting, PluginSettingTab, Menu } = require('obsidian');
+const { Plugin, Modal, MarkdownView, Setting, PluginSettingTab, Menu, setIcon } = require('obsidian');
 
 class EmoticonPickerModal extends Modal {
   constructor(app, plugin, dataset) {
@@ -25,6 +25,7 @@ class EmoticonPickerModal extends Modal {
     
     const searchIcon = searchContainer.createEl('div');
     searchIcon.addClass('emoticon-picker__search-icon');
+    setIcon(searchIcon, 'search');
     
     const input = searchContainer.createEl('input', { type: 'text', placeholder: 'Search emoticons or tags' });
     input.addClass('emoticon-picker__search');

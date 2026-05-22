@@ -21,45 +21,55 @@
   position: relative;
   width: 100%;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  background-color: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--input-radius);
+  padding-left: 10px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.emoticon-picker__search-container:focus-within {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 0 0 1px var(--interactive-accent);
 }
 
 .emoticon-picker__search-icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   width: 16px;
   height: 16px;
   pointer-events: none;
   opacity: 0.6;
-  background-color: var(--text-muted);
-  -webkit-mask-size: 16px 16px;
-  mask-size: 16px 16px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m21 21-4.34-4.34'/%3E%3Ccircle stroke='black' stroke-width='2' cx='11' cy='11' r='8'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m21 21-4.34-4.34'/%3E%3Ccircle stroke='black' stroke-width='2' cx='11' cy='11' r='8'/%3E%3C/svg%3E");
+  color: var(--text-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emoticon-picker__search-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .emoticon-picker__search {
   width: 100%;
-  padding: 10px 12px 10px 12px;
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-s);
-  background-color: var(--background-primary);
+  padding: 10px 12px 10px 8px;
+  border: none !important;
+  background-color: transparent !important;
   color: var(--text-normal);
-  text-indent: 26px;
+  box-sizing: border-box;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .emoticon-picker__search::placeholder {
-  text-indent: 26px;
+  color: var(--text-muted);
 }
 
 .emoticon-picker__search:focus {
-  border-color: var(--interactive-accent);
-  box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .emoticon-picker__tabs {
@@ -90,7 +100,7 @@
 .emoticon-picker__body {
   max-height: 60vh;
   overflow-y: auto;
-  overflow-x: visible; /* allow wrapped rows to expand horizontally if needed */
+  overflow-x: visible;
   padding: 16px;
   min-height: 400px;
   transition: all 0.3s ease;
@@ -108,7 +118,6 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  /* transition: flex-basis 0.2s ease; Smooth transition for width changes */
 }
 
 .emoticon-picker__card.is-wide {
@@ -168,7 +177,7 @@
 }
 
 .emoticon-picker__card.is-wide .emoticon-picker__item {
-  font-size: 18px; /* little smaller font for long emoticons */
+  font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
