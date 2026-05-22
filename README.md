@@ -12,18 +12,6 @@ Easily insert emoticons into your notes using a **Command Palette**, **Hotkeys**
 - **Hide** emoticons you don’t use 
 
 ## Installation
+You can find it in Obsidian's Community Plugins, [here](https://community.obsidian.md/plugins/emoticon-picker)!
 
-> **Status:** Not yet available on Obsidian Community Plugins
-
-### Manual Installation
-
-1. Navigate to your Vault: `.obsidian/plugins/`
-2. Create a folder called `emoticon-picker`
-3. Copy the following files into that folder:
-
-   - `main.js` 
-   - `styles.css` (or your plugin styles file) 
-   - `emotions.json` 
-   - `manifest.json` 
-4. Reload Obsidian and enable the plugin from **Settings → Community Plugins**
-
+Report issues and request features [here](https://github.com/Kazi-Aidah/emoticon-picker/issues).
