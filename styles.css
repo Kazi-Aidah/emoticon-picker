@@ -30,15 +30,10 @@
   display: flex;
   gap: 8px;
   margin-top: 10px;
-  overflow-x: auto;
+  flex-wrap: wrap;
   padding-bottom: 4px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-.emoticon-picker__tabs::-webkit-scrollbar {
-  display: none;
-}
 
 .emoticon-picker__tab {
   border: 1px solid var(--background-modifier-border);
@@ -59,6 +54,7 @@
 .emoticon-picker__body {
   max-height: 60vh;
   overflow-y: auto;
+  overflow-x: visible; /* allow wrapped rows to expand horizontally if needed */
   padding: 16px;
   min-height: 400px;
   transition: all 0.3s ease;
