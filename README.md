@@ -2,7 +2,7 @@
 
 Easily insert emoticons into your notes using a **Command Palette**, **Hotkeys**, or **Ribbon Icon**.
 
-![Emoticon Picker Screenshot](https://github.com/user-attachments/assets/2ba64383-576d-4657-adfd-06d20024af3c)
+![Emoticon Picker Screenshot](https://github.com/user-attachments/assets/6cd5bef9-b6ee-46b2-961f-8a37f31dbdbe)
 
 ## Key Features
 
