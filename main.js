@@ -21,7 +21,13 @@ class EmoticonPickerModal extends Modal {
     const title = header.createEl('h2', { text: 'Emoticon Picker' });
     title.addClass('emoticon-picker__title');
 
-    const input = header.createEl('input', { type: 'text', placeholder: 'Search emoticons or tags' });
+    const searchContainer = header.createEl('div');
+    searchContainer.addClass('emoticon-picker__search-container');
+    
+    const searchIcon = searchContainer.createEl('div');
+    searchIcon.addClass('emoticon-picker__search-icon');
+    
+    const input = searchContainer.createEl('input', { type: 'text', placeholder: 'Search emoticons or tags' });
     input.addClass('emoticon-picker__search');
     input.value = this.query;
 
@@ -30,10 +36,18 @@ class EmoticonPickerModal extends Modal {
     const makeTab = (key, label) => {
       const t = tabs.createEl('button', { text: label });
       t.addClass('emoticon-picker__tab');
-      t.onclick = () => {
+      const switchToTab = () => {
         this.section = key;
         this.focusIndex = 0; // Reset focus when switching tabs
         render();
+      };
+      t.onclick = switchToTab;
+      t.onkeydown = (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          switchToTab();
+        }
       };
       return t;
     };
